@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import App from './components/App';
+import middleware from './middleware'
+import reducer from './reducers'
 
-const store = createStore(()=>{console.log('reducer')})
+const store = createStore(reducer, middleware)
 
 
 ReactDOM.render(
