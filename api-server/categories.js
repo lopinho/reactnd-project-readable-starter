@@ -7,14 +7,17 @@ const defaultData = {
   categories: [
       {
         name: 'react',
+        image: 'https://cdn.worldvectorlogo.com/logos/react.svg',
         path: 'react'
       },
       {
         name: 'redux',
+        image: 'https://cdn.worldvectorlogo.com/logos/redux.svg',
         path: 'redux'
       },
       {
         name: 'udacity',
+        image: 'https://cdn.worldvectorlogo.com/logos/udacity.svg',
         path: 'udacity'
       }
   ]
