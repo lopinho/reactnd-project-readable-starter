@@ -1,5 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography'
+
 import Post from './Post'
 
 
@@ -8,24 +11,22 @@ class PostList extends React.Component {
         const { posts } = this.props
 
         return (
-            <div>
-                <h1>Posts</h1>
-                <ul>
-                    {posts.map((post) => (
-                        <li key={post.id}>
-                            <Post {...post} />
-                        </li>
-                    ))}
-                </ul>
-            </div>
+            <Container>
+                <Typography variant="h4" component="h2" align="center">
+                    Posts
+                </Typography>
+                {posts.map((post) => (
+                        <Post key={ post.id } {...post} />
+                ))}
+            </Container>
         )
     }
 
 }
 
-function mapStateToProps({posts}) {
+function mapStateToProps(state, props) {
     return {
-        posts: posts
+        posts: props.posts || []
     }
 }
 

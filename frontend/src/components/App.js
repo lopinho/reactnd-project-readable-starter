@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { Router } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import { getInitialDataHandler } from '../actions/shared'
 
 import CategoryList from './CategoryList'
-import PostList from './PostList'
+import CategoryDetail from './CategoryDetail'
 
 
 class App extends React.Component {
@@ -15,10 +15,10 @@ class App extends React.Component {
     }
     render () {
         return (
-            <div>
-                <PostList />
-                <CategoryList />
-            </div>
+            <Router>
+                <Route path="/" exact component={CategoryList} />
+                <Route path="/categories/:path" component={CategoryDetail} />
+            </Router>
         )
     }
 }
