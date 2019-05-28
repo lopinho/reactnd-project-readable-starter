@@ -6,7 +6,6 @@ import Category from './Category'
 class CategoryList extends React.Component {
     render () {
         const { categories } = this.props
-        console.log(categories)
         return (
             <div>
                 <h1>Categories:</h1>
