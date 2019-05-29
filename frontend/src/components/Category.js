@@ -1,8 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Link from '@material-ui/core/Link';
-import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Grid from '@material-ui/core/Grid';
@@ -17,10 +15,7 @@ const useStyles = makeStyles(theme => ({
         flexDirection: 'column',
     },
     cardMedia: {
-        paddingTop: '95%',
-        paddingRight: '10px',
-        paddingLeft: '10px',
-        paddingBottom: '10px',
+        paddingTop: '100%',
     },
     cardContent: {
         flexGrow: 1,
@@ -43,7 +38,7 @@ function Category (props) {
                     <CardMedia
                         className={classes.cardMedia}
                         image={image}
-                        title="Image title"
+                        title={`${name} logo`}
                     />
                 </Card>
             </Link>
